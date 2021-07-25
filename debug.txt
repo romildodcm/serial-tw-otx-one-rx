@@ -1,0 +1,22 @@
+14:04:07.479 -> s1
+14:04:09.525 -> Serial unavailable snr code, sends: snr
+14:04:09.571 -> Dados recebidos para s1: snr
+14:04:09.571 -> ---------------------------------------
+14:04:10.594 -> s2
+14:04:12.682 -> s2
+14:04:14.799 -> s2
+14:04:16.837 -> Serial unavailable snr code, sends: snr
+14:04:16.837 -> Dados recebidos para s2: snr
+14:04:16.884 -> ---------------------------------------
+14:04:17.877 -> S1
+14:04:20.010 -> S1
+14:04:22.098 -> S1
+14:04:24.147 -> Serial unavailable snr code, sends: snr
+14:04:24.147 -> Dados recebidos para S1: snr
+14:04:24.195 -> ---------------------------------------
+14:04:25.203 -> uahsuahsuha
+14:04:27.291 -> uahsuahsuha
+14:04:29.409 -> uahsuahsuha
+14:04:31.419 -> Serial unavailable snr code, sends: snr
+14:04:31.466 -> Dados recebidos para uahsuahsuha: snr
+14:04:31.512 -> ---------------------------------------
