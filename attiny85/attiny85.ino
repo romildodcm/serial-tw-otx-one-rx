@@ -3,12 +3,12 @@
 const int led = 4;
 const int analog_read_interval = 10000;
 bool ledBlink = false;
-int sample;
+int sample1, sample2;
 unsigned long last_analog_read = 0;
 
 SoftwareSerial serialCom(2, 0); // RX,TX
 
-bool serial_send(int measurement, String sensor_name = "")
+bool serial_send(int measurement1, int measurement2, String serial_id = "")
 {
     String command;
     String sensor_output;
@@ -18,11 +18,14 @@ bool serial_send(int measurement, String sensor_name = "")
     {
         command = serialCom.readStringUntil('\n');
 
-        if (command.equals(sensor_name))
+        if (command.equals(serial_id))
         {
-            sensor_output.concat(sensor_name);
+            sensor_output.concat(serial_id);
             sensor_output.concat(",");
-            sensor_output.concat(String(measurement));
+            sensor_output.concat(String(measurement1));
+            sensor_output.concat(",");
+            sensor_output.concat(String(measurement2));
+            sensor_output.concat("*");
 
             // Sends data
             serialCom.println(sensor_output);
@@ -46,10 +49,11 @@ void loop()
     {
         last_analog_read = millis();
         // random int number
-        sample = random(1023);
+        sample1 = random(1023);
+        sample2 = random(1023);
     }
 
-    ledBlink = serial_send(sample, "s1");
+    ledBlink = serial_send(sample1, sample2, "id1");
     // ledBlink = serial_send(sample, "s2");
 
     if (ledBlink)
